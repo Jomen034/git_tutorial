@@ -32,7 +32,7 @@ This workshop covers four advanced dbt features:
 
 All workshop models are stored in `models/mini-workshop/` and use the `mini-workshop` tag.
 
-**Schema:** `DEV.MINI_WORKSHOP` (isolated from production)
+**Schema:** `DEV.CORP_DEV_MINI_WORKSHOP` (isolated from production)
 
 **Model Structure:**
 ```
@@ -85,7 +85,7 @@ dbt build --select mart_proofhub_task_ws_simple       # State-aware
 dbt build --select mart_proofhub_task_ws_python         # Python models
 
 # View documentation
-dbt docs generate && dbt docs serve
+dbt docs generate --select tag:mini-workshop && dbt docs serve
 ```
 
 ⚠️ **IMPORTANT:** Always use `tag:mini-workshop`, NOT `path:models/mini-workshop`  
